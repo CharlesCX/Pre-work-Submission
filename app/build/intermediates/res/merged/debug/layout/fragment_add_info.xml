@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:scrollbarStyle="outsideOverlay">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0" >
+
+        <TableRow>
+
+            <TextView
+                android:padding="1dip"
+                android:text="@string/task_title"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="#0000ff"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="@string/task_hint"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_column="2" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#0000ff" />
+
+        <TableRow>
+
+            <TextView
+                android:padding="1dip"
+                android:text="@string/task_note"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="#0000ff"/>
+
+            <EditText
+                android:id="@+id/edit_note"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="@string/notes_hint"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:layout_height="150dp"
+                android:textColor="#0000ff"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="2" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#0000ff" />
+
+        <TableRow>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="#0000ff"
+                android:text="@string/task_date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:layout_span="3" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DatePicker"
+                android:datePickerMode="spinner"
+                android:layout_column="0"
+                android:layout_span="3"
+                android:calendarViewShown="false"
+                />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#0000ff" />
+
+
+        <TableRow>
+
+            <TextView
+                android:padding="1dip"
+                android:text="@string/task_priority"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="#0000ff"/>
+
+            <Spinner
+                android:id="@+id/spinner_priority_level"
+                android:layout_weight="1"
+                android:entries="@array/spinner_priority_level"
+                android:gravity="right"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="2" />
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#0000ff" />
+
+        <Button
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:textColor="#0000ff"
+            android:id="@+id/bSave"
+            android:text="@string/button_save" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            android:textColor="#0000ff"
+            android:id="@+id/bCancel" />
+
+    </TableLayout>
+
+</ScrollView>

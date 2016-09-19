@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.charles.todoapp.MainActivity">
+
+    <item
+        android:id="@+id/additem"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
+        android:title="Add"
+        app:showAsAction="always"/>
+
+</menu>
